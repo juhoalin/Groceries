@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import IQKeyboardManagerSwift
+
 
 class AccountDetailVC: UITableViewController {
     
@@ -25,8 +27,34 @@ class AccountDetailVC: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        firstNameTextField.delegate = self
+        lastNameTextField.delegate = self
+        birthTextField.delegate = self
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
+        confirmTextField.delegate = self
 
         tableView.tableFooterView = UIView()
+        
+        
     }
 
+}
+
+extension AccountDetailVC: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        if textField.returnKeyType == .next {
+            
+            return IQKeyboardManager.shared.goNext()
+
+        } else {
+            
+            return textField.resignFirstResponder()
+        }
+        
+    }
+    
 }

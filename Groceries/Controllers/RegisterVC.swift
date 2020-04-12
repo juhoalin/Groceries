@@ -12,6 +12,8 @@ class RegisterVC: UIViewController {
     
   
     @IBOutlet weak var registerButton: UIButton!
+   
+ 
     
     
     override func viewDidLoad() {
@@ -21,6 +23,8 @@ class RegisterVC: UIViewController {
         registerButton.setTitleColor(UIColor(named: K.mazarineBlue), for: .normal)
         adjustButtonBorders(button: registerButton, cornerRadius: 25, borderWidth: 3, borderColorName: K.mazarineBlue)
         
+        
+                
         
     }
     

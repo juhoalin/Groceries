@@ -23,9 +23,11 @@
 		90DBC101243F25160090801A /* ItemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90DBC100243F25160090801A /* ItemVC.swift */; };
 		90DBC103243F25A70090801A /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 90DBC102243F25A70090801A /* Default-568h@2x.png */; };
 		90DBC105243F38C20090801A /* Pacifico-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 90DBC104243F38C10090801A /* Pacifico-Regular.ttf */; };
+		9CBC92459738C5364F8A0791 /* Pods_Groceries.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEC4FAA86694ECB3A4FF3B14 /* Pods_Groceries.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		34468B85EECB062596C14ADA /* Pods-Groceries.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Groceries.release.xcconfig"; path = "Target Support Files/Pods-Groceries/Pods-Groceries.release.xcconfig"; sourceTree = "<group>"; };
 		90190BD32440E44C0055492A /* LoginDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginDetailVC.swift; sourceTree = "<group>"; };
 		902DDF602440C641006625DA /* AccountDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountDetailVC.swift; sourceTree = "<group>"; };
 		90DBC0D9243F1B920090801A /* Groceries.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Groceries.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +46,8 @@
 		90DBC100243F25160090801A /* ItemVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemVC.swift; sourceTree = "<group>"; };
 		90DBC102243F25A70090801A /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		90DBC104243F38C10090801A /* Pacifico-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Pacifico-Regular.ttf"; path = "../../../../Downloads/Pacifico/Pacifico-Regular.ttf"; sourceTree = "<group>"; };
+		B3FF805F8C55CF52071A817F /* Pods-Groceries.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Groceries.debug.xcconfig"; path = "Target Support Files/Pods-Groceries/Pods-Groceries.debug.xcconfig"; sourceTree = "<group>"; };
+		BEC4FAA86694ECB3A4FF3B14 /* Pods_Groceries.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Groceries.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CBC92459738C5364F8A0791 /* Pods_Groceries.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +68,8 @@
 				90DBC102243F25A70090801A /* Default-568h@2x.png */,
 				90DBC0DB243F1B920090801A /* Groceries */,
 				90DBC0DA243F1B920090801A /* Products */,
+				D5B880E613932C346905CCEC /* Pods */,
+				B655E8E2A8E025D34A6E898B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -129,6 +136,24 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		B655E8E2A8E025D34A6E898B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BEC4FAA86694ECB3A4FF3B14 /* Pods_Groceries.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D5B880E613932C346905CCEC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B3FF805F8C55CF52071A817F /* Pods-Groceries.debug.xcconfig */,
+				34468B85EECB062596C14ADA /* Pods-Groceries.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -136,9 +161,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 90DBC0F0243F1B9D0090801A /* Build configuration list for PBXNativeTarget "Groceries" */;
 			buildPhases = (
+				9FCEACC0EAE4F7C2F0675569 /* [CP] Check Pods Manifest.lock */,
 				90DBC0D5243F1B920090801A /* Sources */,
 				90DBC0D6243F1B920090801A /* Frameworks */,
 				90DBC0D7243F1B920090801A /* Resources */,
+				7E679D214C46308FBDD9E02E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -196,6 +223,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7E679D214C46308FBDD9E02E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Groceries/Pods-Groceries-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Groceries/Pods-Groceries-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Groceries/Pods-Groceries-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9FCEACC0EAE4F7C2F0675569 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Groceries-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		90DBC0D5243F1B920090801A /* Sources */ = {
@@ -354,6 +423,7 @@
 		};
 		90DBC0F1243F1B9D0090801A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B3FF805F8C55CF52071A817F /* Pods-Groceries.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -372,6 +442,7 @@
 		};
 		90DBC0F2243F1B9D0090801A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 34468B85EECB062596C14ADA /* Pods-Groceries.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

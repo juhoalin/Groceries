@@ -20,6 +20,7 @@ class WelcomeVC: UIViewController {
         
         navigationController?.navigationBar.isHidden = true
         
+        
         registerButton.backgroundColor = UIColor.white
         registerButton.setTitleColor(UIColor(named: K.mazarineBlue), for: .normal)
         loginButton.layer.cornerRadius = 25

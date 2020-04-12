@@ -215,7 +215,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="1sy-fn-625"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Login" id="wHP-A8-cRs"/>
+                    <navigationItem key="navigationItem" id="wHP-A8-cRs"/>
                     <connections>
                         <outlet property="loginButton" destination="76x-Es-Ona" id="PdK-Pa-JkS"/>
                     </connections>
@@ -254,7 +254,7 @@
                                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="ericexample@gmail.com" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VUe-sI-elH">
                                                             <rect key="frame" x="187.5" y="0.0" width="186.5" height="30"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                            <textInputTraits key="textInputTraits"/>
+                                                            <textInputTraits key="textInputTraits" returnKeyType="next"/>
                                                         </textField>
                                                     </subviews>
                                                 </stackView>
@@ -287,7 +287,7 @@
                                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SOT-s8-A0u">
                                                             <rect key="frame" x="187.5" y="0.0" width="186.5" height="30"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                            <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                                            <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
                                                         </textField>
                                                     </subviews>
                                                 </stackView>
@@ -421,6 +421,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="6Ig-CP-ERk"/>
                     <connections>
+                        <outlet property="navigationItem" destination="6Ig-CP-ERk" id="egI-4F-Uk0"/>
                         <outlet property="registerButton" destination="IXq-dO-xdB" id="KdZ-H9-54h"/>
                     </connections>
                 </viewController>
@@ -524,7 +525,7 @@
                                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="18.1.1999" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="E54-Ma-tnD">
                                                             <rect key="frame" x="187.5" y="0.0" width="186.5" height="30"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                            <textInputTraits key="textInputTraits"/>
+                                                            <textInputTraits key="textInputTraits" returnKeyType="next"/>
                                                         </textField>
                                                     </subviews>
                                                 </stackView>
@@ -557,7 +558,7 @@
                                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="ericexample@gmail.com" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KBh-9P-Nmk">
                                                             <rect key="frame" x="187" y="0.0" width="187" height="30"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                            <textInputTraits key="textInputTraits"/>
+                                                            <textInputTraits key="textInputTraits" returnKeyType="next"/>
                                                         </textField>
                                                     </subviews>
                                                 </stackView>
@@ -590,7 +591,7 @@
                                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Min. 6 characters" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cLK-bK-RHu">
                                                             <rect key="frame" x="187.5" y="0.0" width="186.5" height="30"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                            <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                                            <textInputTraits key="textInputTraits" returnKeyType="next" secureTextEntry="YES"/>
                                                         </textField>
                                                     </subviews>
                                                 </stackView>
@@ -623,7 +624,7 @@
                                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Retype Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jZY-5c-B0z">
                                                             <rect key="frame" x="187.5" y="0.0" width="186.5" height="30"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                            <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                                            <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
                                                         </textField>
                                                     </subviews>
                                                 </stackView>
@@ -731,10 +732,12 @@
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="barTintColor" name="mazarine-blue"/>
                         <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <color key="textShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </textAttributes>
                         <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <color key="textShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </textAttributes>

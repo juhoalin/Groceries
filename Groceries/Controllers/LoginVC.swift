@@ -12,10 +12,10 @@ class LoginVC: UIViewController {
     
     @IBOutlet weak var loginButton: UIButton!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationItem.titleView?.tintColor = .white
         
         loginButton.layer.cornerRadius = 25
         

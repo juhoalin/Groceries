@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import IQKeyboardManagerSwift
 
 class LoginDetailVC: UITableViewController {
 
@@ -17,9 +18,32 @@ class LoginDetailVC: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
+        
         tableView.tableFooterView = UIView()
+   
 
     }
 
 
 }
+
+extension LoginDetailVC: UITextFieldDelegate {
+
+func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+    
+    if textField.returnKeyType == .next {
+        
+        return IQKeyboardManager.shared.goNext()
+
+    } else {
+        
+        return textField.resignFirstResponder()
+    }
+    
+}
+
+}
+
+
