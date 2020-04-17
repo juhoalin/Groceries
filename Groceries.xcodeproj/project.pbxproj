@@ -3,12 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		90190BD42440E44C0055492A /* LoginDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90190BD32440E44C0055492A /* LoginDetailVC.swift */; };
 		902DDF612440C641006625DA /* AccountDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902DDF602440C641006625DA /* AccountDetailVC.swift */; };
+		905B099624437424007C5C7F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 905B099524437423007C5C7F /* GoogleService-Info.plist */; };
+		90962DC02447413300EDD3F1 /* FSCategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90962DBF2447413200EDD3F1 /* FSCategoryModel.swift */; };
+		90962DC224474C7A00EDD3F1 /* FSItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90962DC124474C7A00EDD3F1 /* FSItemModel.swift */; };
 		90DBC0DD243F1B920090801A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90DBC0DC243F1B920090801A /* AppDelegate.swift */; };
 		90DBC0DF243F1B920090801A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90DBC0DE243F1B920090801A /* SceneDelegate.swift */; };
 		90DBC0E1243F1B920090801A /* WelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90DBC0E0243F1B920090801A /* WelcomeVC.swift */; };
@@ -30,6 +33,9 @@
 		34468B85EECB062596C14ADA /* Pods-Groceries.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Groceries.release.xcconfig"; path = "Target Support Files/Pods-Groceries/Pods-Groceries.release.xcconfig"; sourceTree = "<group>"; };
 		90190BD32440E44C0055492A /* LoginDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginDetailVC.swift; sourceTree = "<group>"; };
 		902DDF602440C641006625DA /* AccountDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountDetailVC.swift; sourceTree = "<group>"; };
+		905B099524437423007C5C7F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../GoogleService-Info.plist"; sourceTree = "<group>"; };
+		90962DBF2447413200EDD3F1 /* FSCategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FSCategoryModel.swift; sourceTree = "<group>"; };
+		90962DC124474C7A00EDD3F1 /* FSItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FSItemModel.swift; sourceTree = "<group>"; };
 		90DBC0D9243F1B920090801A /* Groceries.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Groceries.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90DBC0DC243F1B920090801A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		90DBC0DE243F1B920090801A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -91,6 +97,7 @@
 				90DBC0E8243F1B9D0090801A /* Assets.xcassets */,
 				90DBC0EA243F1B9D0090801A /* LaunchScreen.storyboard */,
 				90DBC0ED243F1B9D0090801A /* Info.plist */,
+				905B099524437423007C5C7F /* GoogleService-Info.plist */,
 				90DBC0E5243F1B920090801A /* Groceries.xcdatamodeld */,
 				90DBC104243F38C10090801A /* Pacifico-Regular.ttf */,
 			);
@@ -132,6 +139,8 @@
 			isa = PBXGroup;
 			children = (
 				90DBC0F7243F200B0090801A /* Constants.swift */,
+				90962DBF2447413200EDD3F1 /* FSCategoryModel.swift */,
+				90962DC124474C7A00EDD3F1 /* FSItemModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -150,7 +159,6 @@
 				B3FF805F8C55CF52071A817F /* Pods-Groceries.debug.xcconfig */,
 				34468B85EECB062596C14ADA /* Pods-Groceries.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -219,6 +227,7 @@
 				90DBC0E9243F1B9D0090801A /* Assets.xcassets in Resources */,
 				90DBC0E4243F1B920090801A /* Main.storyboard in Resources */,
 				90DBC105243F38C20090801A /* Pacifico-Regular.ttf in Resources */,
+				905B099624437424007C5C7F /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,10 +280,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90962DC02447413300EDD3F1 /* FSCategoryModel.swift in Sources */,
 				90DBC0F8243F200B0090801A /* Constants.swift in Sources */,
 				90DBC101243F25160090801A /* ItemVC.swift in Sources */,
 				90DBC0E1243F1B920090801A /* WelcomeVC.swift in Sources */,
 				90DBC0FF243F24DA0090801A /* CategoryVC.swift in Sources */,
+				90962DC224474C7A00EDD3F1 /* FSItemModel.swift in Sources */,
 				90DBC0FB243F24370090801A /* LoginVC.swift in Sources */,
 				90DBC0E7243F1B920090801A /* Groceries.xcdatamodeld in Sources */,
 				90DBC0FD243F24770090801A /* RegisterVC.swift in Sources */,

@@ -18,5 +18,20 @@ struct K {
     static let categoryToItem = "CategoryToItem"
     static let categoryCellIdentifier = "CategoryCell"
     static let itemCellIdentifier = "ItemCell"
+    static let embedAccountDetails = "embedAccountDetails"
+    static let loginEmbedSegue = "LoginEmbedSegue"
+    
+    struct Firebase {
+        
+        static let users = "users"
+        static let categories = "Categories"
+        static let items = "Items"
+        static let date = "creationDate"
+        static let name = "name"
+        static let done = "done"
+        }
+        
+        
+    
     
 }

@@ -15,6 +15,11 @@ class LoginDetailVC: UITableViewController {
    
     @IBOutlet weak var passwordTextField: UITextField!
     
+    var emailAddress = "juhoalin@icloud.com"
+    var password = "123456"
+    
+    var loginVC = LoginVC()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -43,7 +48,41 @@ func textFieldShouldReturn(_ textField: UITextField) -> Bool {
     }
     
 }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        
+        if textField == emailTextField && emailTextField.text != nil {
+            emailAddress = emailTextField.text!
+            print(emailAddress)
+        } else if textField == passwordTextField && passwordTextField.text != nil {
+            password = passwordTextField.text!
+            print(password)
+        }
+    }
 
+}
+
+extension LoginDetailVC: LoginDelegate {
+    
+    func updateDetails() {
+        
+        loginVC.emailAddress = emailAddress
+        loginVC.password = password
+        
+        print("Login details updated")
+        
+    }
+    
+    func deleteDetails() {
+        
+        emailTextField.text = ""
+        passwordTextField.text = ""
+        
+    }
+    
+    
+    
+    
 }
 
 

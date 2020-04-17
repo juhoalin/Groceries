@@ -160,7 +160,7 @@
                                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iaZ-x9-kdq">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="177"/>
                                                 <connections>
-                                                    <segue destination="HOt-Mq-N6F" kind="embed" id="Dba-rT-nO9"/>
+                                                    <segue destination="HOt-Mq-N6F" kind="embed" identifier="LoginEmbedSegue" id="Dba-rT-nO9"/>
                                                 </connections>
                                             </containerView>
                                         </subviews>
@@ -190,7 +190,6 @@
                                                 <connections>
                                                     <action selector="loginButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OMe-KK-C9D"/>
                                                     <action selector="loginButtonPressed:" destination="UZD-ct-o4C" eventType="touchUpInside" id="hD2-nU-g6X"/>
-                                                    <segue destination="ufq-5v-RUc" kind="show" identifier="LoginToCategory" id="7V1-UY-jBA"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -218,6 +217,7 @@
                     <navigationItem key="navigationItem" id="wHP-A8-cRs"/>
                     <connections>
                         <outlet property="loginButton" destination="76x-Es-Ona" id="PdK-Pa-JkS"/>
+                        <segue destination="ufq-5v-RUc" kind="show" identifier="LoginToCategory" id="oef-Ao-B2q"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yjP-2H-lzF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -362,7 +362,7 @@
                                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zR8-lz-8Gk" userLabel="Details View">
                                                 <rect key="frame" x="0.0" y="195" width="414" height="303"/>
                                                 <connections>
-                                                    <segue destination="5MS-vP-EsA" kind="embed" id="YbI-uw-2Ge"/>
+                                                    <segue destination="5MS-vP-EsA" kind="embed" identifier="embedAccountDetails" id="YbI-uw-2Ge"/>
                                                 </connections>
                                             </containerView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I4t-wu-5iy" userLabel="Button View">
@@ -383,7 +383,6 @@
                                                         <connections>
                                                             <action selector="registerButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jy4-yl-doi"/>
                                                             <action selector="registerButtonPressed:" destination="LnR-Lh-l8A" eventType="touchUpInside" id="bZf-i1-g3k"/>
-                                                            <segue destination="ufq-5v-RUc" kind="show" identifier="RegisterToCategory" id="IF0-DF-oQ2"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -423,6 +422,7 @@
                     <connections>
                         <outlet property="navigationItem" destination="6Ig-CP-ERk" id="egI-4F-Uk0"/>
                         <outlet property="registerButton" destination="IXq-dO-xdB" id="KdZ-H9-54h"/>
+                        <segue destination="ufq-5v-RUc" kind="show" identifier="RegisterToCategory" id="pqY-fM-Let"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gC2-Oc-184" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -647,12 +647,12 @@
                         </connections>
                     </tableView>
                     <connections>
-                        <outlet property="birthTextField" destination="E54-Ma-tnD" id="xQ1-Qg-PTJ"/>
-                        <outlet property="confirmTextField" destination="jZY-5c-B0z" id="x0u-D3-Qm4"/>
-                        <outlet property="emailTextField" destination="KBh-9P-Nmk" id="CiG-Pi-myi"/>
-                        <outlet property="firstNameTextField" destination="ELc-ZB-Qdu" id="QWb-PS-RtW"/>
-                        <outlet property="lastNameTextField" destination="Gnj-Vw-TJU" id="X1C-7D-xBE"/>
-                        <outlet property="passwordTextField" destination="cLK-bK-RHu" id="AlZ-Ny-hBA"/>
+                        <outlet property="birthTextField" destination="E54-Ma-tnD" id="qDp-GJ-nQr"/>
+                        <outlet property="confirmTextField" destination="jZY-5c-B0z" id="sOD-Il-YQO"/>
+                        <outlet property="emailTextField" destination="KBh-9P-Nmk" id="NYa-Mu-GpI"/>
+                        <outlet property="firstNameTextField" destination="ELc-ZB-Qdu" id="LK5-tY-CZi"/>
+                        <outlet property="lastNameTextField" destination="Gnj-Vw-TJU" id="D1u-Gt-gNf"/>
+                        <outlet property="passwordTextField" destination="cLK-bK-RHu" id="CNs-ts-g72"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gSb-0R-Jnv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -663,16 +663,16 @@
         <scene sceneID="N1N-Zg-Jgz">
             <objects>
                 <tableViewController title="Category View" id="ufq-5v-RUc" customClass="CategoryVC" customModule="Groceries" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="1YU-Ea-Mrd">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="65" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="1YU-Ea-Mrd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategoryCell" id="MJK-rB-EDn">
-                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="CategoryCell" rowHeight="65" id="MJK-rB-EDn">
+                                <rect key="frame" x="0.0" y="28" width="414" height="65"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MJK-rB-EDn" id="0Cs-jv-N0J">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="383" height="65"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -682,7 +682,18 @@
                             <outlet property="delegate" destination="ufq-5v-RUc" id="Npi-wY-6Tz"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="mxl-J0-bar"/>
+                    <navigationItem key="navigationItem" id="mxl-J0-bar">
+                        <barButtonItem key="leftBarButtonItem" title="Log Out" id="ni9-4B-CCA">
+                            <connections>
+                                <action selector="logOutPressed:" destination="ufq-5v-RUc" id="FLL-ya-DlG"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="rvU-IW-WIu">
+                            <connections>
+                                <action selector="addButtonPressed:" destination="ufq-5v-RUc" id="No4-ky-AXy"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <segue destination="J3Y-5W-uuo" kind="show" identifier="CategoryToItem" id="LRs-op-wJ1"/>
                     </connections>
@@ -695,16 +706,16 @@
         <scene sceneID="bN6-by-H7i">
             <objects>
                 <tableViewController title="Item View" id="J3Y-5W-uuo" customClass="ItemVC" customModule="Groceries" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="y3s-6i-xer">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="65" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="y3s-6i-xer">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ItemCell" id="tpX-Xx-dBl">
-                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <rect key="frame" x="0.0" y="28" width="414" height="65"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tpX-Xx-dBl" id="QRt-Qb-WSP">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="65"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -714,7 +725,13 @@
                             <outlet property="delegate" destination="J3Y-5W-uuo" id="nPP-Qd-oRg"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="VxL-n4-Q1Q"/>
+                    <navigationItem key="navigationItem" id="VxL-n4-Q1Q">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="oFE-Vh-m7t">
+                            <connections>
+                                <action selector="addButtonPressed:" destination="J3Y-5W-uuo" id="YTb-wb-4Gp"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mlt-ri-Xvo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -753,7 +770,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="7V1-UY-jBA"/>
+        <segue reference="oef-Ao-B2q"/>
     </inferredMetricsTieBreakers>
     <resources>
         <namedColor name="mazarine-blue">
