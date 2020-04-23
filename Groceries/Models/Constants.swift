@@ -16,7 +16,7 @@ struct K {
     static let registerToCategory = "RegisterToCategory"
     static let loginToCategory = "LoginToCategory"
     static let categoryToItem = "CategoryToItem"
-    static let categoryCellIdentifier = "CategoryCell"
+    static let categoryCellIdentifier = "Cell"
     static let itemCellIdentifier = "ItemCell"
     static let embedAccountDetails = "embedAccountDetails"
     static let loginEmbedSegue = "LoginEmbedSegue"

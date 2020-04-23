@@ -40,6 +40,7 @@ class AccountDetailVC: UITableViewController {
         confirmTextField.delegate = self
 
         tableView.tableFooterView = UIView()
+        tableView.isScrollEnabled = false
         
         registerVC.delegate = self
         

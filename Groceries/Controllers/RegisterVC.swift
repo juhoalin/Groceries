@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import IQKeyboardManagerSwift
 
 protocol DetailsDelegate {
     func updateDetails()
@@ -51,6 +52,9 @@ override func viewDidLoad() {
     navigationItem.standardAppearance = appearance
     
     navigationItem.scrollEdgeAppearance = appearance
+    
+    IQKeyboardManager.shared.enable = false
+    IQKeyboardManager.shared.enableAutoToolbar = false
 
 
     }

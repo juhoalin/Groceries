@@ -18,6 +18,10 @@ class WelcomeVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationController?.isToolbarHidden = true
+        
+        navigationController?.navigationBar.prefersLargeTitles = true
+        
         navigationController?.navigationBar.isHidden = true
         
         
@@ -34,6 +38,7 @@ class WelcomeVC: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.setNavigationBarHidden(true, animated: true)
+        navigationController?.isToolbarHidden = true
     }
     
     override func viewWillDisappear(_ animated: Bool) {
